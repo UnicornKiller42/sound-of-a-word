@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sound of a Word</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23ffcf33'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle'%3E%E2%99%AA%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="toy">
+    <header class="mast">
+      <p class="eyebrow">a pocket synthesizer</p>
+      <h1>Sound of a Word</h1>
+      <p class="lede">Type any word. It plays a tune made only from its letters.</p>
+    </header>
+
+    <div id="stage" class="stage" aria-hidden="true"></div>
+
+    <form id="composer" class="composer" autocomplete="off">
+      <label class="word-label" for="word">Your word</label>
+      <input id="word" name="word" type="text" maxlength="42" enterkeyhint="go" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="banana">
+      <div class="controls">
+        <button id="play" class="play" type="submit">Play</button>
+        <button id="loop" class="loop" type="button" aria-pressed="false">Loop</button>
+      </div>
+    </form>
+
+    <div class="chips" role="group" aria-label="Examples">
+      <button type="button" data-word="banana">banana</button>
+      <button type="button" data-word="Mississippi">Mississippi</button>
+      <button type="button" data-word="hello world">hello world</button>
+    </div>
+
+    <p id="how" class="how"></p>
+    <button id="share" class="share" type="button">Copy share link</button>
+  </main>
+  <script src="melody.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
